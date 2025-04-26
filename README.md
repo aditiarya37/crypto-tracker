@@ -1,12 +1,24 @@
-# React + Vite
+# Real-Time Crypto Price Tracker (React + Redux Toolkit)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application displaying cryptocurrency prices with simulated real-time updates, built using React, Redux Toolkit, and Tailwind CSS. This project fulfills the requirements for the [Name of Internship or Company, if applicable] assignment.
 
-Currently, two official plugins are available:
+![Demo Screenshot](</crypto-tracker/public/crypto-tracker-ss.jpeg>)
+*(Optional: Add a screenshot of your running application here. You can upload the image to your GitHub repo and link it)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+*   Displays a list of cryptocurrencies in a responsive table.
+*   Shows key data: Price, % Change (1h, 24h, 7d), Market Cap, Volume, Circulating Supply.
+*   Simulates real-time data updates every ~1.5 seconds using `setInterval`.
+*   Uses Redux Toolkit for centralized state management.
+*   Styled using Tailwind CSS (with basic dark mode support).
+*   Includes simple static SVG charts representing the 7-day trend.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+*   **Framework/Library:** React (Vite)
+*   **State Management:** Redux Toolkit (`@reduxjs/toolkit`, `react-redux`)
+*   **Styling:** Tailwind CSS
+*   **Language:** JavaScript (JSX)
+
+## Project Structure Overview
