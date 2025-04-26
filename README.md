@@ -4,8 +4,9 @@ A responsive web application displaying simulated real-time cryptocurrency price
 
 ## Demo
 
-[![Application Screenshot](/crypto-tracker/public/crypto-tracker-ss.jpeg)]
-**[View Demo Video](<YOUR_DEMO_LINK_HERE>)**  
+[![Application Screenshot](public/crypto-tracker-ss.jpeg)]
+
+**[View Demo Video](<YOUR_DEMO_LINK_HERE>)**
 
 ---
 
