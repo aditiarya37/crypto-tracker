@@ -1,40 +1,39 @@
-# 💹 Crypto Price Tracker - React & Redux Toolkit
+# Crypto Price Tracker - React & Redux Toolkit
 
-A responsive web application that simulates real-time cryptocurrency price tracking, built with **React**, **Redux Toolkit**, and **Tailwind CSS**.
+A responsive web application displaying simulated real-time cryptocurrency prices, built using React, Redux Toolkit, and Tailwind CSS.
 
----
+## Demo
 
-## 🚀 Demo
-
-[![Application Screenshot](</crypto-tracker/public/crypto-tracker-ss.jpeg>)]
-
-👉 [Watch Demo Video](<YOUR_DEMO_LINK_HERE>)
+[![Application Screenshot](/crypto-tracker/public/crypto-tracker-ss.jpeg)]
+**[View Demo Video](<YOUR_DEMO_LINK_HERE>)**  
 
 ---
 
-## ✨ Features
+## Features
 
-- 📈 Real-time Simulation: Data updates every ~1.5 seconds using `setInterval`.
-- 📊 Rich Data Display: Includes rank, name, price, market cap, volume, supply, and percentage changes (1h, 24h, 7d).
-- 🧠 State Management: Centralized using Redux Toolkit for clean, predictable state logic.
-- 📱 Responsive Design: Table is scrollable and adapts to different screen sizes.
-- 🔺 Visual Cues: Color-coded percent changes and SVG chart icons for 7-day trends.
-- ⚡ Built with Vite: Fast and modern dev environment.
-- 🎨 Tailwind CSS: Utility-first CSS with built-in dark mode support (basic).
-
----
-
-## 🛠 Technology Stack
-
-- Frontend: React 18+, JSX
-- State Management: Redux Toolkit, React-Redux
-- Styling: Tailwind CSS v3
-- Build Tool: Vite
-- Language: JavaScript (ES6+)
+- **Real-time Simulation:** Prices, % changes, and volume update every 1.5s via simulated WebSocket using `setInterval`.
+- **Filter & Sort:** Easily filter/sort by top gainers/losers, price, market cap, etc.
+- **Data Display:** Displays rank, name, symbol, price, % changes (1h, 24h, 7d), market cap, volume, and supply.
+- **Redux State Management:** Centralized store with Redux Toolkit (createSlice, selectors, configureStore).
+- **Persistent State:** localStorage support keeps user settings and filters even after a refresh.
+- **Responsive Design:** Table scrolls horizontally on smaller devices. Tailwind CSS ensures a clean and adaptable layout.
+- **Visual Indicators:** Green for positive % change, red for negative. Static SVG 7D chart gives visual trends.
+- **Modern Tooling:** Built with Vite for a fast dev experience.
+- **Dark Mode Ready:** Basic dark mode styling with Tailwind.
 
 ---
 
-## 📁 Project Structure
+## Technology Stack
+
+- **Framework:** React 18+
+- **State Management:** Redux Toolkit, React-Redux
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v3
+- **Extras:** localStorage API, JavaScript (ES6+), JSX
+
+---
+
+## Project Structure
 
 ```text
 /public/
@@ -42,48 +41,48 @@ A responsive web application that simulates real-time cryptocurrency price track
     ├── generic-down-trend.svg
     ├── generic-flat-trend.svg
     └── generic-up-trend.svg
-
 /src/
 ├── app/                   # Redux store configuration
 │   └── store.js
 ├── components/            # Reusable UI components
 │   ├── CryptoTable.jsx
-│   └── CryptoTableRow.jsx
-├── data/                  # Initial static data
-│   └── sampleData.js
-├── features/              # Redux slices (state logic)
+│   ├── CryptoTableRow.jsx
+│   └── FilterBar.jsx      # Filtering/sorting UI
+├── data/
+│   └── sampleData.js      # Initial static crypto data
+├── features/
 │   └── crypto/
-│       └── cryptoSlice.js
-├── App.jsx                # Main application component, simulation logic
-├── index.css              # Tailwind CSS directives and base styles
-└── main.jsx               # Application entry point, Redux Provider setup
-
-README.md                  # Project documentation
-package.json               # Project dependencies and scripts
-vite.config.js             # Vite configuration
-tailwind.config.js         # Tailwind customization
-postcss.config.js          # PostCSS setup
+│       └── cryptoSlice.js # Redux slice managing crypto state
+├── utils/
+│   └── localStorage.js    # Load/save state from localStorage
+├── App.jsx                # Main component & real-time update logic
+├── index.css              # Tailwind base styles
+└── main.jsx               # Entry point + Redux Provider
+README.md
+vite.config.js
+tailwind.config.js
+package.json
 ```
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
-### 📦 Prerequisites
+### Prerequisites
 
-- [Node.js](https://nodejs.org/) (LTS version recommended)
+- Node.js (LTS recommended)
 - npm or yarn
 
-### 📥 Installation & Setup
+### Installation
 
-1. Clone the repository:
+Clone the repo:
 
 ```bash
-git clone https://github.com/aditiarya37/crypto-tracker
+git clone <YOUR_REPOSITORY_URL>
 cd crypto-tracker
 ```
 
-2. Install dependencies:
+Install dependencies:
 
 ```bash
 npm install
@@ -91,7 +90,7 @@ npm install
 yarn install
 ```
 
-3. Start the development server:
+Run the dev server:
 
 ```bash
 npm run dev
@@ -99,14 +98,36 @@ npm run dev
 yarn dev
 ```
 
-4. Open in your browser:
-
-Visit: http://localhost:5173
+Visit [http://localhost:5173](http://localhost:5173) to see the app.
 
 ---
 
-## 📌 Notes
+## Bonus Features Implemented ✅
 
-- This is a **frontend-only simulation** — it does not use a live API.
-- To simulate real-time data, we use `setInterval()` to randomly adjust values.
-- All data is local and randomized for demo purposes.
+- ✅ **Filters & Sorting:** Sort by price, market cap, volume, % change; filter by top gainers, etc.
+- ✅ **localStorage Support:** Persist filters/sort settings between sessions.
+
+---
+
+## How It Works
+
+- A list of 5+ crypto assets is stored in Redux state.
+- Every 1.5s, a random update is dispatched to simulate real-time price/volume changes.
+- Filtering/sorting uses Redux selectors to ensure performance.
+- User's last-used sort/filter settings are saved via `localStorage`.
+
+---
+
+## Notes
+
+This app was built for an internship assignment to demonstrate:
+- Practical use of Redux Toolkit
+- Real-time UI simulation
+- Clean architecture and responsive UI
+- Bonus features like localStorage + sorting/filtering
+
+---
+
+## License
+
+MIT – use it, remix it, own it.
