@@ -6,7 +6,7 @@ A responsive web application that simulates real-time cryptocurrency price track
 
 ## 🚀 Demo
 
-[![Application Screenshot](/crypto-tracker/public/crypto-tracker-ss.jpeg)]
+[![Application Screenshot](</crypto-tracker/public/crypto-tracker-ss.jpeg>)]
 
 👉 [Watch Demo Video](<YOUR_DEMO_LINK_HERE>)
 
